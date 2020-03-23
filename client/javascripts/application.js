@@ -18,24 +18,26 @@ var Application = function() {
   });
 
   // Loading screen
-  app.socket.on('connect', function (data) {
-		new HandView(app);
-		new BoardView(app);
-		// var url = new URL(window.location.href);
-		// url.pathname.includes("board")
+	app.socket.on('connect', function (data) {
+		var url = new URL(window.location.href);
+		if ( url.pathname.includes("board") ) {
+			new BoardView(app);
+		} else {
+			new HandView(app);
+		}
   });
  
   return app;
 }
 
 // Used to adjust borders on mobile
-var windowHeight = window.innerHeight/2-40;
+var windowHeight = window.innerHeight-40;
 var windowWidth = window.innerWidth-40;
 $('.screen').css('height', windowHeight + 'px')
 $('.screen').css('width', windowWidth + 'px')
 
 window.onresize = function(event) {
-  windowHeight = window.innerHeight/2-40;
+  windowHeight = window.innerHeight-40;
   windowWidth = window.innerWidth-40;
   
   $('.screen').css('height', windowHeight + 'px')

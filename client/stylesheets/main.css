@@ -1,27 +1,25 @@
-#board-game, #hand-game {
+#game {
   min-width: 300px;
 }
 .debug {
   outline: 1px solid red;
 }
 
-#board-game section, #hand-game section {
+#game section {
   display: none;
 }
 
-#board-game[page=board-loading] #board-loading, 
-#hand-game[page=hand-loading] #hand-loading, 
-#board-game[page=board-lobby-view] #board-lobby-view,
-#hand-game[page=hand-lobby-controller] #hand-lobby-controller, 
-#board-game[page=board-join] #board-join,
-#hand-game[page=hand-join-mobile] #hand-join-mobile,
-#hand-game[page=hand-choose-role] #hand-choose-role, 
-#hand-game[page=hand-hand] #hand-hand,
-#hand-game[page=hand-play-card] #hand-play-card,
-#board-game[page=board-board] #board-board,
-#board-game[page=board-player-action] #board-player-action,
-#hand-game[page=hand-player-action] #hand-player-action,
-#hand-game[page=hand-end-game] #hand-end-game  {
+#game[page=loading] #loading, 
+#game[page=lobby-view] #lobby-view,
+#game[page=lobby-controller] #lobby-controller, 
+#game[page=join] #join,
+#game[page=join-mobile] #join-mobile,
+#game[page=choose-role] #choose-role, 
+#game[page=hand] #hand,
+#game[page=play-card] #play-card,
+#game[page=board] #board,
+#game[page=player-action] #player-action,
+#game[page=hand-end-game] #hand-end-game  {
   display: block
 }
 

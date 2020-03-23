@@ -1,4 +1,4 @@
-#board-card_container, #hand-card_container {
+#card_container {
   height: 306px;
   margin: 20px auto;
   position: relative;
@@ -9,7 +9,7 @@
   -webkit-perspective: 1000;
 }
 
-#board-loading_card, #hand-loading_card {
+#loading_card {
   height: 100%;
   width: 100%;
   
@@ -30,7 +30,7 @@
   -webkit-animation-iteration-count:infinite;
 }
 
-#board-loading_card img, #hand-loading_card  img {  
+#loading_card img {  
   border-radius: 20px;
   border: 3px solid black;
   max-width: 300px;
