@@ -3,18 +3,6 @@ var CardRules = require('./decks/standard-card-rules');
 var boardHeight = 7;
 var boardWidth = 11;
 
-/* How the grid will work
-
-[0,0][][][][][][][][][][]
-[][][][][][][][][][9,1][]
-[][][][][][][][][][][]
-[][1,3][][][][][][][][9,3][]
-[][][][][][][][][][][]
-[][][][][][][][][][9,5][]
-[][][][][][][][][][][10,6]
-
-*/
-
 // Flip 180 degrees
 
 var Board = function(socket) {
@@ -79,6 +67,7 @@ Board.prototype.placeCard = function( locationY, locationX, card, rotated ) {
 
   var card = (rotated ? 'rotated-' : '') + card;
   var cardRules = getCardRules(card);
+	console.log('Rules:', cardRules);
 
   // validate move
 

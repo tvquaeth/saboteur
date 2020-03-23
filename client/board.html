@@ -1,0 +1,77 @@
+<!doctype html>
+<article id="board-game" page="board-loading">
+	
+	<section id="board-loading" class="layer white-border">
+		<div class="screen">
+			<div id="board-card_container">
+				<div id="board-loading_card" class="shadow">
+					<div class="front face">
+						<img src="/images/job-card-back.jpg"/>
+					</div>
+					<div class="back face">
+						<img src="/images/job-saboteur.jpg"/>	
+					</div>
+				</div>
+			</div>
+			<div class="loading-text title center">
+				Now Loading!
+			</div>
+		</div>
+		
+	</section>
+	
+	<section id="board-lobby-view" class="layer white-border">
+		<div class="screen">
+			<div id="board-title" class="lobby-text title center">
+				Saboteur
+			</div>
+			<div class="center">
+				<button id="board-create-game" class="input yellow-border create-game" type="button">Create a Game!</button>
+			</div>          
+		</div>
+	</section>
+	
+	<section id="board-join" class="layer white-border">
+		 <div class="screen">
+			<div id="board-title" class="lobby-text title center">
+				Saboteur
+			</div>
+			<div class="info yellow-border">
+				<div class="info-text">
+					Enter the code below on your mobile device.
+				</div>
+				<div id="board-gameid" class="code center">
+				</div>
+			</div>
+			<div class="players">
+				<div class="player"><div class="colour"><div class="player-text">Player Joined</div></div></div>
+				<div class="player"><div class="colour"><div class="player-text">Player Joined</div></div></div>
+				<div class="player"><div class="colour"><div class="player-text">Player Joined</div></div></div>
+				<div class="player"><div class="colour"><div class="player-text">Player Joined</div></div></div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="board-board" class="layer white-border">
+		<div class="screen">
+			<div class="board center">
+				<!-- board is added in with javascript -->  
+			</div>
+			
+			<div id="board-end-game" class="end-game">
+				<div id="board-saboteurs-win">Saboteurs Win!</div>
+				<div id="board-miners-win">Miners Win!</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="board-player-action" class="layer white-border">
+		<div class="screen">
+			<div class="view center">
+				<ul class="players-status"></ul><!-- to be added with is added in with javascript -->  
+				<div class="playing-action-card"><div card="" id="board-selected-action-card"></div></div>
+			</div>
+		</div>
+	</section>
+	
+</article>

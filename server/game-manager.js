@@ -48,7 +48,7 @@ GameManager.prototype.start = function() {
 };
 
 GameManager.prototype.playCard = function(card, data) {
-  console.log('Game manager has ' + card);
+  console.log('Playing:', card, '('+data.type+')');
   if (data.type == 'play') {
     return this.board.placeCard(data.y, data.x, card, data.rotated);
   } else if (data.type == 'play-map') {
@@ -68,8 +68,9 @@ GameManager.prototype.playCard = function(card, data) {
     return applyCard;
   } else if (data.type == 'play-avalanche') {
 		return this.board.removeCard(data.y, data.x);
+	} else {
+		return false;
 	}
-  return false;
 }
 
 GameManager.prototype.checkForWinner = function() {

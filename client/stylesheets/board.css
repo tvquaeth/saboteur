@@ -41,7 +41,7 @@
 	to { box-shadow: 0 0 9px #2daebf; -webkit-filter: brightness(1.0);}
 }
 
-#board .screen {
+#board-board .screen {
 	-webkit-perspective: 400px;
 	-webkit-perspective-origin-x: 50%;
 	-webkit-perspective-origin-y: 10%;
@@ -59,7 +59,7 @@
   width: 100%;
 }
 
-#selected-action-card {
+#hand-selected-action-card, #board-selected-action-card {
   background-repeat: no-repeat;
   background-size: 300px;
   border-radius: 15px 15px 0 0;

@@ -47,7 +47,6 @@ Game.prototype.start = function(socket) {
 
 Game.prototype.play = function(socket, card, data) {
   if (this.gameManager.playCard(card, data) || card === 'discard-card' ) {
-    socket.emit('place card');
     
     var flipGoalLocation = this.gameManager.board.checkToFlipGoal(data.y, data.x, card);
     
@@ -81,7 +80,7 @@ Game.prototype.play = function(socket, card, data) {
     }
 
   } else {
-    socket.emit('error', data);
+    socket.emit('client-err', data);
   }
 };
 

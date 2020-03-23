@@ -1,0 +1,144 @@
+<!doctype html>
+<article id="hand-game" page="hand-loading">
+	
+	<section id="hand-loading" class="layer white-border">
+		<div class="screen">
+			<div id="hand-card_container">
+				<div id="hand-loading_card" class="shadow">
+					<div class="front face">
+						<img src="/images/job-card-back.jpg"/>
+					</div>
+					<div class="back face">
+						<img src="/images/job-saboteur.jpg"/>	
+					</div>
+				</div>
+			</div>
+			<div class="loading-text title center">
+				Now Loading!
+			</div>
+		</div>
+		
+	</section>
+	
+	<section id="hand-lobby-controller" class="layer white-border">
+		<div class="screen">
+			<div id="hand-title" class="lobby-text title center">
+				Saboteur
+			</div>
+			<div id="hand-inputs" class="center">
+				<input id="hand-input-code" class="code yellow-border" type="text" x-webkit-speech="x-webkit-speech">
+				<input id="hand-join-game" class="input yellow-border join" type="button" name="Submit" value="Join">
+			</div>
+		</div>
+	</section>
+	
+	 <section id="hand-join-mobile" class="layer white-border">
+		 <div class="screen">
+			<div class="player-title player-text center">
+				Player
+			</div>
+			<div class="waiting-text center">
+				Waiting for others to join...
+			</div>
+			<div class="ready-button yellow-border center">
+				Game requires at least 3 players to start
+			</div>
+		</div>
+	</section>
+	
+	<section id="hand-choose-role" class="layer white-border">
+		<div class="screen">
+			<div id="hand-title" class="title center">
+				You are a ...
+			</div>
+			<div class="job-card">
+				<div class="flip-card-front">
+					<img src="/images/job-card-back.jpg"/>
+				</div>
+				<div class="flip-card-back">
+					<!-- image is added in with javascript -->  
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="hand-hand" class="layer white-border">
+		<div class="screen">
+			<div class="hand">
+				<!-- hand is added in with javascript -->  
+			</div>
+			<div class="revealed-goal hide flipped">
+				<!-- added by javascript when map card is played -->
+			</div>
+		</div>
+	</section>
+	
+	<section id="hand-play-card" class="layer white-border">
+		<div class="screen">
+			<div class="view-wrapper">
+				<div class="grid-50 left">
+					<div class="play-card">
+						<div class="selected-card">
+							<!-- card is added in with javascript 
+							when the player is ready the click on the card again to play it
+							need to tell the server to remove from hand and add to board
+							-->  
+							<div class="play-button">Play!</div>
+						</div>  
+					</div> 
+				</div>
+				<div class="grid-50 right">
+					<div class="buttons">
+						<div class="rotate-button"></div>
+						<div class="back-button"></div>
+						<div class="discard-button">
+							Discard
+						</div>
+					</div>
+			 
+					<div class="d-pad">
+						<ul>
+							<li class="box"></li>
+							<li class="box up-button"></li>
+							<li class="box"></li>
+						</ul>
+						<ul>
+							<li class="box left-button"></li>
+							<li class="box center-button"></li>
+							<li class="box right-button"></li>
+						</ul>
+						<ul>
+							<li class="box"></li>
+							<li class="box down-button"></li>
+							<li class="box"></li>
+						</ul> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="hand-player-action" class="layer white-border">
+		<div class="screen">
+			<div class="view center">
+				<ul class="players-status"></ul><!-- to be added with is added in with javascript -->  
+				<div class="playing-action-card"><div card="" id="hand-selected-action-card"></div></div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="hand-end-game" class="layer white-border end-game">
+		<div class="screen">
+			<div class="winner center">
+				Winner!
+			</div>
+			<div class="loser center">
+				Loser!
+			</div>
+			<div class="center input title">
+				Replay?
+			</div>
+		</div>
+	</section>
+	
+</article>
