@@ -98,7 +98,9 @@ var Server = function() {
       
       playerAction: (socket, callback) => {
         return (data) => {
+					console.log('\n-------------------');
 					console.log('PLAYER ACTION', data);
+					console.log('by', socket.id);
 					var game = self.games[socket.game];
 					if (game) {  
 						// sending to host
@@ -116,9 +118,9 @@ var Server = function() {
 								game.host.emit('player-action-card', {card: data.card, currentPlayer: game.gameManager.currentPlayerIndex});
 							}
 							if (data.cardType == 'map') {
-								// console.log('SERVER.JS - Player played a map card');
 								// send server goal positions that are not flipped
 								// emit coordinates of goals to board in array
+								console.log('SERVER.JS - Player played a map card');
 								game.host.emit('map-card', {card: data.card, location: game.gameManager.board.goalLocations});
 							}
 							if (data.cardType == 'avalanche') {

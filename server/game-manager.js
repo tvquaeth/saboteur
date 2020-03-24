@@ -103,10 +103,7 @@ GameManager.prototype.startPlayerTurn = function() {
 };
 
 GameManager.prototype.nextPlayer = function(){
-	this.currentPlayerIndex = this.currentPlayerIndex + 1;
-	if (this.currentPlayerIndex === this.players.length) {
-		this.currentPlayerIndex = 0;
-	}
+	this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.players.length;
 	this.startPlayerTurn();
 };
 

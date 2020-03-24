@@ -9,7 +9,7 @@ var HandView = function(app) {
     app.socket.emit('join', $('#input-code').val());
   });
   $('.ready-button').click(function(event) {
-    if (app.game.playerCount >= 4) {
+    if (app.game.playerCount >= 3) {
       $('.ready-button').hide();
       console.log('triggered start game');
       app.socket.emit('start');
